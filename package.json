@@ -1,6 +1,6 @@
 {
   "name": "better-console-logging",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Better console logging with trace and colors",
   "main": "BetterConsoleLogging.js",
   "scripts": {
