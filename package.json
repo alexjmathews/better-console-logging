@@ -1,0 +1,22 @@
+{
+  "name": "better-console-logging",
+  "version": "1.0.0",
+  "description": "Better console logging with trace and colors",
+  "main": "BetterConsoleLogging.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexjmathews/better-console-logging.git"
+  },
+  "author": "Alex Mathews",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexjmathews/better-console-logging/issues"
+  },
+  "homepage": "https://github.com/alexjmathews/better-console-logging#readme",
+  "dependencies": {
+    "chalk": "^1.1.3"
+  }
+}
