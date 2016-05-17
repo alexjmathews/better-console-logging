@@ -1,5 +1,5 @@
 var chalk = require('chalk')
-module.exports = function() {
+module.exports = function(dir) {
     ['log', 'warn', 'error'].forEach(function(method) {
         var old = console[method];
         console[method] = function() {
@@ -24,13 +24,13 @@ module.exports = function() {
     			color = chalk.yellow;
     		}
     		var trimmed = stack[1].trim();
-    		if (trimmed.indexOf(__dirname)>=0) {
-    			var index = trimmed.indexOf(__dirname);
+    		if (trimmed.indexOf(dir)>=0) {
+    			var index = trimmed.indexOf(dir);
     			var paren = stack[1].trim().indexOf("(");
     			if (paren >=0) {
-    				trimmed = trimmed.substring(0, index -1) +  trimmed.substring(index + __dirname.length+1, trimmed.length-1)
+    				trimmed = trimmed.substring(0, index -1) +  trimmed.substring(index + dir.length+1, trimmed.length-1)
     			} else {
-    				trimmed = trimmed.substring(0, index -1) + " "+ trimmed.substring(index + __dirname.length+1)
+    				trimmed = trimmed.substring(0, index -1) + " "+ trimmed.substring(index + dir.length+1)
     			}
     		}
     		trimmed = color(trimmed);
